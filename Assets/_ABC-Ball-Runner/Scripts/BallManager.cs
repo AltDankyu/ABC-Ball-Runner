@@ -36,10 +36,13 @@ namespace AbcBallRunner
             GetRigidbody().AddForce(force * Time.deltaTime * rotationBias);
         }
 
+
+        // 一通りのアルファベットオブジェクトを読み込む
         public char CurrentAlphabet()
         {
             for (var i = 0; i < balls.Length; i++)
             {
+                // 自分のアルファベットボールが来たらINDEX→アルファベットに変えて返す。
                 if (balls[i].activeSelf)
                 {
                     return ConvertFromIndexToAlphabet(i);
