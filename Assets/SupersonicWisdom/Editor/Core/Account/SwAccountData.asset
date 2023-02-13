@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bde5b51eef6a4560b2a2442b047a9a7, type: 3}
+  m_Name: SwAccountData
+  m_EditorClassIdentifier: 
+  titlesList:
+  - games: []
+    id: 
+    name: --- select ---
+  - games:
+    - adMobId: 
+      bundleId: 
+      facebookAppId: 1240817743138665
+      gameAnalyticsKey: da7c203f5a124b5f31e95f38177c655b
+      gameAnalyticsSecret: e9b59c38f2eaf8554f7f725e40ae3bee4897f4b3
+      id: 31fc67c5-8582-430a-ae38-4a9c894603da
+      isAppKey: 
+      os: android
+      platform: google_play
+      storeId: 
+    id: e13f1426-c29f-4688-9b0b-cb0f96dc8694
+    name: ABC Merge Split Run
+  - games:
+    - adMobId: 
+      bundleId: 
+      facebookAppId: 1609889656123610
+      gameAnalyticsKey: d37c208c91137a23866d571b5ef40cf9
+      gameAnalyticsSecret: 145dabe4cb417d6397d276c0c99e8a82f5926f87
+      id: 95230b78-b162-4d55-8d9c-62a272218b83
+      isAppKey: 
+      os: android
+      platform: google_play
+      storeId: 
+    id: d09f5ec1-bf66-4143-b393-800edc05ae7e
+    name: Scale Car 3D
+  - games:
+    - adMobId: 
+      bundleId: 
+      facebookAppId: 1324955434957502
+      gameAnalyticsKey: 6515bfed8ce6570ab10f303be7abe1f0
+      gameAnalyticsSecret: 1baccf34a6c871694c619c3284015fcd142406ce
+      id: 66ad21a7-c6c0-43f4-905e-f7bd6690ca31
+      isAppKey: 
+      os: android
+      platform: google_play
+      storeId: 
+    id: d1164c53-6ba2-4303-aca1-6b7f3ea6e8fe
+    name: Swich Your Scale
+  integrationGuideUrl: 

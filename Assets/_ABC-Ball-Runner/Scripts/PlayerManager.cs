@@ -23,6 +23,10 @@ namespace AbcBallRunner
 
         [SerializeField] private float tapInterval;
 
+
+        // UI‚ğ•\¦‚³‚¹‚é‚½‚ß‚ÌéŒ¾
+
+
         private float coolTime;
 
         private void Update()
