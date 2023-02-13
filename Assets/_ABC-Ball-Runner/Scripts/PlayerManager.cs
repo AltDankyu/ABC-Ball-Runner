@@ -25,8 +25,19 @@ namespace AbcBallRunner
 
         private float coolTime;
 
+
+        [SerializeField] private GameObject Start_UI;
+
         private void Update()
         {
+
+            // Startボタンが表示されている限り、ボールは動かさない。
+            if(Start_UI.activeSelf == true)
+            {
+                return;
+            }
+            
+
             coolTime -= Time.deltaTime;
 
             // 前方移動処理

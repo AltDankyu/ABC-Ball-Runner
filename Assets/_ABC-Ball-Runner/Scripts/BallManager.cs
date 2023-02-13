@@ -12,7 +12,11 @@ namespace AbcBallRunner
         [SerializeField] private GameObject[] balls;
         [SerializeField] private float rotationBias;
 
+
         private Rigidbody _rigidbody;
+
+        // UI表示用の宣言
+        [SerializeField] private GameObject Start_UI_Ball;
 
         public Rigidbody GetRigidbody()
         {
@@ -26,6 +30,12 @@ namespace AbcBallRunner
 
         private void Update()
         {
+            if(Start_UI_Ball.activeSelf == true)
+            {
+                return;
+            }
+            
+
             // 垂直方向分の回転処理（RigidbodyのFreezePositionにチェックが入っているから位置移動はしない）
             GetRigidbody().AddForce(Vector3.forward * playerManager.Speed() * Time.deltaTime * rotationBias);
         }
