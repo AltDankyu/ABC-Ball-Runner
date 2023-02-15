@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SupersonicWisdomSDK;
 
 public class Floor : MonoBehaviour
 {
 
     [SerializeField] private GameObject canvas_fail;
+
+
+    // 現在のステージを取得
+    int nowLevel_2 = GameManager.currentLevel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +32,7 @@ public class Floor : MonoBehaviour
         {
             // 失敗処理
             canvas_fail.SetActive(true);
+            SupersonicWisdom.Api.NotifyLevelFailed(nowLevel_2, null);
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SupersonicWisdomSDK;
 
 public class GoalLineController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class GoalLineController : MonoBehaviour
         Goal_UI.SetActive(true);
         
         // ここにCompleteタグを書けばOK?
+        SupersonicWisdom.Api.NotifyLevelCompleted(nowLevel_1, null);
         Debug.Log("currentLevel_Goal == "+ nowLevel_1);
     }
 

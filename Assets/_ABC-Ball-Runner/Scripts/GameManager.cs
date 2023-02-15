@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using SupersonicWisdomSDK;
+
+
+
+
 
 public class GameManager : MonoBehaviour
 {
@@ -15,10 +20,17 @@ public class GameManager : MonoBehaviour
 
     public static int currentLevel = 1;
 
+
+
+
     void Awake()
     {
-        // MainCanvas.SetActive(false);
+        // Subscribe
+        SupersonicWisdom.Api.AddOnReadyListener(OnSupersonicWisdomReady);
+        // Then initialize
+        SupersonicWisdom.Api.Initialize();
     }
+
 
     // Update is called once per frame
     void Update()
@@ -38,6 +50,8 @@ public class GameManager : MonoBehaviour
     {
         Start.SetActive(false);
         // ここにStartタグを書けばOK?
+
+        SupersonicWisdom.Api.NotifyLevelStarted(currentLevel, null);
         Debug.Log("Start_currentLevel == "+ currentLevel);
     }
 
@@ -45,4 +59,15 @@ public class GameManager : MonoBehaviour
     {
         currentLevel++;
     }
+
+
+    void OnSupersonicWisdomReady()
+    {
+        // Start your game from this point
+    }
+
+
+
+
+
 }
