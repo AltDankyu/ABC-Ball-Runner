@@ -6,9 +6,6 @@ using UnityEngine.UI;
 using SupersonicWisdomSDK;
 
 
-
-
-
 public class GameManager : MonoBehaviour
 {
 
@@ -30,6 +27,8 @@ public class GameManager : MonoBehaviour
         // Then initialize
         SupersonicWisdom.Api.Initialize();
     }
+
+
 
 
     // Update is called once per frame

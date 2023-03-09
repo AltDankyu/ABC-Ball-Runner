@@ -31,7 +31,7 @@ namespace AbcBallRunner
         private void Update()
         {
 
-            // Startƒ{ƒ^ƒ“‚ª•\¦‚³‚ê‚Ä‚¢‚éŒÀ‚èAƒ{[ƒ‹‚Í“®‚©‚³‚È‚¢B
+            // Startãƒœã‚¿ãƒ³ãŒè¡¨ç¤ºã•ã‚Œã¦ã„ã‚‹é™ã‚Šã€ãƒœãƒ¼ãƒ«ã¯å‹•ã‹ã•ãªã„ã€‚
             if(Start_UI.activeSelf == true)
             {
                 return;
@@ -40,10 +40,10 @@ namespace AbcBallRunner
 
             coolTime -= Time.deltaTime;
 
-            // ‘O•ûˆÚ“®ˆ—
+            // å‰æ–¹ç§»å‹•å‡¦ç†
             transform.position += Vector3.forward * speed * Time.deltaTime;
 
-            // ƒ^ƒbƒv”»’è
+            // ã‚¿ãƒƒãƒ—åˆ¤å®š
             if (coolTime <= 0)
             {
                 if (Input.GetMouseButtonDown(0))
@@ -69,18 +69,18 @@ namespace AbcBallRunner
 
         private void Split()
         {
-            // ƒAƒ‹ƒtƒ@ƒxƒbƒg‚ÌXV
+            // ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ›´æ–°
             splittedBallLeft.SetAlphabet(unionedBall.PreviousAlphabet());
             splittedBallRight.SetAlphabet(unionedBall.PreviousAlphabet());
 
-            // ƒ{[ƒ‹‚ªˆÚ“®’†‚¾‚Á‚½‚ç~‚ß‚Ä‚¨‚­
+            // ãƒœãƒ¼ãƒ«ãŒç§»å‹•ä¸­ã ã£ãŸã‚‰æ­¢ã‚ã¦ãŠã
             StopAllCoroutines();
 
-            // ˆÊ’u‚Ì‰Šú‰»
+            // ä½ç½®ã®åˆæœŸåŒ–
             splittedBallLeft.transform.position = centerBallPosition.position;
             splittedBallRight.transform.position = centerBallPosition.position;
 
-            // ˆÚ“®ŠJn
+            // ç§»å‹•é–‹å§‹
             StartCoroutine(SplitCoroutine());
         }
 
@@ -98,29 +98,29 @@ namespace AbcBallRunner
             {
                 timeElapsed += Time.deltaTime;
 
-                // ‰¡ˆÚ“®ˆ—
+                // æ¨ªç§»å‹•å‡¦ç†
                 var leftBallPositionX = Mathf.Lerp(centerBallPosition.position.x, leftBallPosition.position.x, timeElapsed / splitSpan);
                 var rightBallPositionX = Mathf.Lerp(centerBallPosition.position.x, rightBallPosition.position.x, timeElapsed / splitSpan);
 
                 splittedBallLeft.transform.position = new Vector3(leftBallPositionX, splittedBallLeft.transform.position.y, splittedBallLeft.transform.position.z);
                 splittedBallRight.transform.position = new Vector3(rightBallPositionX, splittedBallRight.transform.position.y, splittedBallRight.transform.position.z);
 
-                // ‰ñ“]ˆ—
+                // å›è»¢å‡¦ç†
                 splittedBallLeft.AddForce(Vector3.left * speed);
                 splittedBallRight.AddForce(Vector3.right * speed);
 
                 yield return null;
             }
 
-            // ˆÊ’u‚ªƒsƒbƒ^ƒŠ‡‚¤‚æ‚¤‚ÉC³‚·‚éê‡‚Í‚±‚Ì‚æ‚¤‚É‚·‚éiƒJƒNƒcƒL‚Ì’²®‚ª•K—vj
+            // ä½ç½®ãŒãƒ”ãƒƒã‚¿ãƒªåˆã†ã‚ˆã†ã«ä¿®æ­£ã™ã‚‹å ´åˆã¯ã“ã®ã‚ˆã†ã«ã™ã‚‹ï¼ˆã‚«ã‚¯ãƒ„ã‚­ã®èª¿æ•´ãŒå¿…è¦ï¼‰
             // splittedBallLeft.transform.position = leftBallPosition.position;
             // splittedBallRight.transform.position = rightBallPosition.position;
         }
 
         private void Union()
         {
-            // ƒAƒ‹ƒtƒ@ƒxƒbƒg‚ÌXV
-            // ƒAƒ‹ƒtƒ@ƒxƒbƒg‚ªˆá‚Á‚½ê‡‚Í‘å‚«‚¢•û‚ÌƒAƒ‹ƒtƒ@ƒxƒbƒg‚ÉB“¯‚¶ê‡‚ÍŸ‚ÌƒAƒ‹ƒtƒ@ƒxƒbƒg‚ÉB
+            // ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ›´æ–°
+            // ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆãŒé•ã£ãŸå ´åˆã¯å¤§ãã„æ–¹ã®ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã«ã€‚åŒã˜å ´åˆã¯æ¬¡ã®ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã«ã€‚
             if (splittedBallLeft.CurrentAlphabet() == splittedBallRight.CurrentAlphabet())
             {
                 unionedBall.SetAlphabet(splittedBallLeft.NextAlphabet());
@@ -131,10 +131,10 @@ namespace AbcBallRunner
                 unionedBall.SetAlphabet((char)max);
             }
 
-            // ƒ{[ƒ‹‚ªˆÚ“®’†‚¾‚Á‚½‚ç~‚ß‚Ä‚¨‚­
+            // ãƒœãƒ¼ãƒ«ãŒç§»å‹•ä¸­ã ã£ãŸã‚‰æ­¢ã‚ã¦ãŠã
             StopAllCoroutines();
 
-            // ˆÚ“®ŠJn
+            // ç§»å‹•é–‹å§‹
             StartCoroutine(UnionCoroutine());
         }
 
@@ -146,25 +146,25 @@ namespace AbcBallRunner
             {
                 timeElapsed += Time.deltaTime;
 
-                // ‰¡ˆÚ“®ˆ—
+                // æ¨ªç§»å‹•å‡¦ç†
                 var leftBallPositionX = Mathf.Lerp(leftBallPosition.position.x, centerBallPosition.position.x, timeElapsed / splitSpan);
                 var rightBallPositionX = Mathf.Lerp(rightBallPosition.position.x, centerBallPosition.position.x, timeElapsed / splitSpan);
 
                 splittedBallLeft.transform.position = new Vector3(leftBallPositionX, splittedBallLeft.transform.position.y, splittedBallLeft.transform.position.z);
                 splittedBallRight.transform.position = new Vector3(rightBallPositionX, splittedBallRight.transform.position.y, splittedBallRight.transform.position.z);
 
-                // ‰ñ“]ˆ—
+                // å›è»¢å‡¦ç†
                 splittedBallLeft.AddForce(Vector3.left * speed);
                 splittedBallRight.AddForce(Vector3.right * speed);
 
                 yield return null;
             }
 
-            // ˆÊ’u‚ªƒsƒbƒ^ƒŠ‡‚¤‚æ‚¤‚ÉC³‚·‚é
+            // ä½ç½®ãŒãƒ”ãƒƒã‚¿ãƒªåˆã†ã‚ˆã†ã«ä¿®æ­£ã™ã‚‹
             splittedBallLeft.transform.position = centerBallPosition.position;
             splittedBallRight.transform.position = centerBallPosition.position;
 
-            // ƒ{[ƒ‹‚Ì•\¦
+            // ãƒœãƒ¼ãƒ«ã®è¡¨ç¤º
             unionedBall.gameObject.SetActive(true);
             splittedBallLeft.gameObject.SetActive(false);
             splittedBallRight.gameObject.SetActive(false);
