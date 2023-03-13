@@ -16,7 +16,7 @@ public class AlphabetController : MonoBehaviour
         alphabet_balls[currentModelIndex].SetActive(true);
     }
 
-    void Update () {
+    void FixedUpdate () {
         // 前回のモデル切り替えからの経過時間を増加する
         timePassed += Time.deltaTime;
 

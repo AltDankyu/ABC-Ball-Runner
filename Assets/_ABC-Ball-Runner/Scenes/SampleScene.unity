@@ -2229,6 +2229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball A
       objectReference: {fileID: 0}
+    - target: {fileID: 6410704961818874141, guid: 4c133beda38db344a8c549537ddc0e04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c133beda38db344a8c549537ddc0e04, type: 3}
 --- !u!1001 &243967008
@@ -20770,6 +20774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8610909101130624029}
     m_Modifications:
+    - target: {fileID: 1414959940569393915, guid: 8188708d3a741c4469dde90d56b6b11d, type: 3}
+      propertyPath: switchTime
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 5067564813833536081, guid: 8188708d3a741c4469dde90d56b6b11d, type: 3}
       propertyPath: m_Name
       value: A_Anim
