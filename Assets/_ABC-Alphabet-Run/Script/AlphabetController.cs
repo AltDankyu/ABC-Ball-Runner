@@ -8,7 +8,7 @@ public class AlphabetController : MonoBehaviour
 
     private int currentModelIndex = 0; // 現在表示しているモデルのインデックス
     private float timePassed = 0f; // 前回のモデル切り替えからの経過時間
-    public float switchTime = 0.1f; // モデルを切り替える間隔（秒）
+    public float switchTime = 0.01f; // モデルを切り替える間隔（秒）
 
 
     void Start () {

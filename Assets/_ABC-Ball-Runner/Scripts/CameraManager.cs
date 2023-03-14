@@ -8,11 +8,11 @@ namespace AbcBallRunner
     {
         [SerializeField] private Transform player;
 
-        private Vector3 _offset;
+        [SerializeField] private Vector3 _offset;
 
         private void Awake()
         {
-            _offset = transform.position - player.position;
+            // _offset = transform.position - player.position;
         }
 
         private void Update()
